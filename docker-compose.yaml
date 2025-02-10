@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  pg:
+    container_name: rbac-api-pg-db
+    image: bitnami/postgresql:latest
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DATABASE=next-saas
